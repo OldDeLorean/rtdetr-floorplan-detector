@@ -1,0 +1,16 @@
+# YOLO dataset manifest for train.py — EDIT `path` to your dataset location.
+# The dataset itself is NOT included in this release. Expected layout:
+#
+#   CubiCasaPath/cubicasa5k_yolo/
+#   ├── images/{train,val,test}/*.png
+#   └── labels/{train,val,test}/*.txt     # YOLO format: cls cx cy w h (normalized)
+#
+# (Converted from CubiCasa5K, https://zenodo.org/record/2613548; for eval.py
+#  you additionally need COCO polygon annotations — see README.)
+path: /path/to/CubiCasaPath/cubicasa5k_yolo
+train: images/train
+val: images/val
+test: images/test
+
+nc: 5
+names: ['wall', 'door', 'window', 'railing', 'linkage_point']

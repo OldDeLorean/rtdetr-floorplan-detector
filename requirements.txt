@@ -1,0 +1,15 @@
+# RT-DETR-L floor-plan detector — requirements
+# Python >= 3.9. For GPU, install a CUDA build of torch first, e.g.:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+# then `pip install -r requirements.txt` (CPU-only works out of the box).
+
+# inference (predict.py)
+ultralytics>=8.2
+torch>=2.0
+torchvision>=0.15
+pillow>=9.0
+
+# training + evaluation (train.py / eval.py)
+numpy
+pycocotools
+shapely>=2.0
