@@ -17,6 +17,11 @@ Part of the **Architect Ant** paper —
 [arXiv:2606.10953](https://arxiv.org/abs/2606.10953)
 ([HTML](https://arxiv.org/html/2606.10953)).
 
+**▶ Try it online — no setup:**
+[Kaggle notebook](https://www.kaggle.com/code/rodionovfedorshad/rtdetr-floorplan-detector)
+(runs validation on the CubiCasa5K test split end-to-end; pick the **T4 x2**
+accelerator — the preinstalled PyTorch no longer supports the P100).
+
 ## Model card
 
 | | |
