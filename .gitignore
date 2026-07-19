@@ -3,3 +3,4 @@ __pycache__/
 runs/
 .gt_tmp.json
 .venv/
+val_renders/
