@@ -6,10 +6,12 @@ Detects the load-bearing structure of a floor-plan image in one pass:
 This is a straightforward application of **RT-DETR**
 ([Zhao et al., arXiv:2304.08069](https://arxiv.org/abs/2304.08069), of the
 DETR family — [Carion et al., arXiv:2005.12872](https://arxiv.org/abs/2005.12872))
-to the floor-plan domain: the architecture is the unmodified ultralytics
-RT-DETR-L; what this package contributes is the task adaptation (5 structural
-classes), the training recipe, the trained weights, and an honest benchmark
-against prior CubiCasa5K methods.
+to the floor-plan domain: the architecture is the unmodified RT-DETR-L as
+implemented in the [Ultralytics](https://github.com/ultralytics/ultralytics)
+library (also used here for training and inference; AGPL-3.0). What this
+package contributes is the task adaptation (5 structural classes), the
+training recipe, the trained weights, and an honest benchmark against prior
+CubiCasa5K methods.
 
 Part of the **Architect Ant** paper —
 [arXiv:2606.10953](https://arxiv.org/abs/2606.10953)
@@ -19,7 +21,7 @@ Part of the **Architect Ant** paper —
 
 | | |
 |---|---|
-| architecture | RT-DETR-L (ultralytics), 32.8 M parameters |
+| architecture | RT-DETR-L ([Ultralytics](https://docs.ultralytics.com/models/rtdetr/) implementation), 32.8 M parameters |
 | checkpoint | `weights/rtdetr_l_autoresearch_60ep.pt` — **66 MB** (FP16 weights only, no optimizer state; inference-ready single file) |
 | input | 1024×1024 (trained & evaluated; other sizes degrade accuracy) |
 | training | CubiCasa5K official split (4200 train), 60 epochs, 2×A100 (~2.3 h) |
@@ -138,6 +140,8 @@ reproduces the model-card table above.
 
 If you use this model or the comparison results, please cite the Architect
 Ant paper ([arXiv:2606.10953](https://arxiv.org/abs/2606.10953)), the
-CubiCasa5K dataset (Kalervo et al., 2019, arXiv:1904.01920), and the
+CubiCasa5K dataset (Kalervo et al., 2019, arXiv:1904.01920), the
 underlying detector: RT-DETR (Zhao et al., arXiv:2304.08069) / DETR
-(Carion et al., arXiv:2005.12872).
+(Carion et al., arXiv:2005.12872), and the
+[Ultralytics](https://github.com/ultralytics/ultralytics) library
+(Jocher, Qiu & Chaurasia — training/inference implementation used here).
